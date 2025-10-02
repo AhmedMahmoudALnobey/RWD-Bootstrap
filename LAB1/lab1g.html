@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task2</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #3a2a2a;
+            color: #333;
+        }
+      
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+
+        .banner {
+            background-color: #5b9aa0;
+            color: white;
+            padding: 30px;
+            display: grid;
+            grid-template-columns: 70px auto;
+            align-items: center;
+        }
+
+        .banner .icon {
+            font-size: 50px;
+        }
+
+        .banner-text h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .banner-text p {
+            font-size: 20px;
+            line-height: 1.5;
+        }
+
+        .row {
+            margin: 20px;
+        }
+        .row {
+            margin: 20px;
+        }
+        .row::after {
+            content: "";
+            clear: both;
+            /* display: table; */
+        }
+
+        [class*="col-"] {
+            float: left;
+            padding: 15px;
+        }
+
+        aside {
+            background-color: #e8f1f2;
+            padding: 20px;
+            height: 387px;
+        }
+
+        aside ul {
+            list-style: none;
+        }
+
+        aside ul li {
+            margin-bottom: 10px;
+        }
+
+        aside ul li a {
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            align-items: center;
+        }
+
+        aside ul li a i {
+            margin-right: 10px;
+            color: #5b9aa0;
+        }
+
+        .content {
+            background-color: white;
+            padding: 20px;
+        }
+
+        .content h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .content p {
+            font-size: 20px;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        /* @media screen and (max-width: 425px) {
+            [class*="col-"] {
+                width: 100% !important;
+            }
+            .banner-text p,
+            .content p {
+                font-size: 12px;
+            }
+            .banner {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .banner .icon {
+                margin-bottom: 15px;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            .col-3 {
+                width: 25%;
+            }
+            .col-9 {
+                width: 75%;
+            }
+            .banner-text p,
+            .content p {
+                font-size: 18px;
+            }
+        } */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="col-12" style="background-color: teal; padding: 20px; color: white;">
+            <div class="header-top">
+                <div class="logo">YOUR LOGO</div>
+                <div class="header-text">Using a single layout to create several different looks</div>
+            </div>
+            <nav>
+                <a href="#">Home</a>
+                <span class="separator">|</span>
+                <a href="#">About</a>
+                <span class="separator">|</span>
+                <a href="#">Services</a>
+                <span class="separator">|</span>
+                <a href="#">Contact Us</a>
+            </nav>
+        </header>
+        <div class="banner col-12">
+            <div class="icon">
+                <i class="fas fa-paper-plane"></i>
+            </div>
+            <div class="banner-text">
+                <h1>About</h1>
+                <p>And then some plain text would go in here saying something about the section we're in. Probably some glowing statement about the company or whatever.</p>
+            </div>
+        </div>
+        <div class="row ">
+            <aside class="col-3">
+                <ul>
+                    <li><a href="#"><i class="fas fa-info-circle"></i>About Us</a></li>
+                    <li><a href="#"><i class="fas fa-cogs"></i>How We Work</a></li>
+                    <li><a href="#"><i class="fas fa-comment-dots"></i>Testimonials</a></li>
+                    <li><a href="#"><i class="fas fa-headset"></i>Contact Support</a></li>
+                </ul>
+            </aside>
+
+            <div class="content col-9">
+                <h2>How We Work</h2>
+                <p>Morbi non dui. Aenean lorem tortor, placerat a, blandit aliquam, hendrerit nec, velit. Praesent et pede. Etiam non tellus. Fusce adipiscing. Nunc varius commodo enim. In hac habitasse platea dictumst.</p>
+                <p>Quisque porttitor, pede non rutrum mollis, ante dui semper libero, eu placerat magna dolor at odio. In mollis. Nullam vehicula rhoncus ante. Vivamus vehicula velit ac nibh. Curabitur eget justo at turpis elementum dapibus.</p>
+                <p>Praesent bibendum mauris. In sollicitudin. Aenean sapien mauris, commodo sit amet, lacreet sed, sodales vel est. Nunc ut odio.</p>
+                <p>Curabitur justo tellus, faucibus eu, vehicula vitae, vulputate a, massa. Morbi tempus ullamcorper velit. Donec vitae est. Maecenas scipit venenatis purus. Suspendisse sed tortor a mi egestas pretium. Quisque nec massa ac pede auctor aliquam. Pellentesque tincidunt neque nec arcu.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

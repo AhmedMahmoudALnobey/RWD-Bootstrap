@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task1</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #3a2a2a;
+            color: #333;
+        }
+        header {
+            background-color: #3a2a2a;
+            padding: 15px 30px;
+        }
+
+        .header-top {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 10px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .header-text {
+            color: white;
+            font-size: 14px;
+            opacity: 0.7;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        nav .separator {
+            color: white;
+            font-size: 14px;
+        }
+
+        /* Banner */
+        .banner {
+            background-color: #5b9aa0;
+            color: white;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .banner i {
+            font-size: 50px;
+        }
+
+        .banner-text {
+            max-width: 600px;
+        }
+
+        .banner-text h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .banner-text p {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* Main Content */
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #f5f5f5;
+        }
+
+        /* Sidebar */
+        aside {
+            flex: 1;
+            min-width: 200px;
+            background-color: #d0e1e3;
+            padding: 20px;
+        }
+
+        aside ul {
+            list-style: none;
+        }
+
+        aside ul li {
+            margin: 15px 0;
+        }
+
+        aside ul li a {
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        aside ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Content */
+        .content {
+            flex: 3;
+            min-width: 300px;
+            padding: 30px;
+            background-color: #f5f5f5;
+        }
+
+        .content h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .content p {
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: #666;
+        }
+        @media (max-width: 768px) {
+            .header-top {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav .separator {
+                display: none;
+            }
+
+            .banner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .banner i {
+                margin: 0 auto;
+            }
+
+            .main-content {
+                flex-direction: column;
+            }
+
+            aside, .content {
+                flex: 1;
+                min-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .banner-text h1 {
+                font-size: 28px;
+            }
+
+            .banner-text p {
+                font-size: 12px;
+            }
+
+            .content h2 {
+                font-size: 20px;
+            }
+
+            .content p {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="logo"><i class="fas fa-desktop"></i></div>
+            <div class="header-text">Using a single layout to create several different looks</div>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <span class="separator">|</span>
+            <a href="#">About</a>
+            <span class="separator">|</span>
+            <a href="#">Services</a>
+            <span class="separator">|</span>
+            <a href="#">Contact Us</a>
+        </nav>
+    </header>
+    <section class="banner">
+        <i class="fas fa-paper-plane"></i>
+        <div class="banner-text">
+            <h1>About</h1>
+            <p>And then some plain text would go in here saying something about the section we're in. Probably some glowing statement about the company or whatever.</p>
+        </div>
+    </section>
+    <section class="main-content">
+        <aside>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">How We Work</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Contact Support</a></li>
+            </ul>
+        </aside>
+
+        <div class="content">
+            <h2>How We Work</h2>
+            <p>Morbi non dui. Aenean lorem tortor, placerat a, blandit aliquam, hendrerit nec, velit. Praesent et pede. Etiam non tellus. Fusce adipiscing. Nunc varius commodo enim. In hac habitasse platea dictumst.</p>
+            <p>Quisque porttitor, pede non rutrum mollis, ante dui semper libero, eu placerat magna dolor at odio. In mollis. Nullam vehicula rhoncus ante. Vivamus vehicula velit ac nibh. Curabitur eget justo at turpis elementum dapibus.</p>
+            <p>Praesent bibendum mauris. In sollicitudin. Aenean sapien mauris, commodo sit amet, lacreet sed, sodales vel est. Nunc ut odio.</p>
+            <p>Curabitur justo tellus, faucibus eu, vehicula vitae, vulputate a, massa. Morbi tempus ullamcorper velit. Donec vitae est. Maecenas scipit venenatis purus. Suspendisse sed tortor a mi egestas pretium. Quisque nec massa ac pede auctor aliquam. Pellentesque tincidunt neque nec arcu.</p>
+        </div>
+    </section>
+</body>
+</html>
